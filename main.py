@@ -3,10 +3,11 @@ import matplotlib.pyplot as plt
 import seaborn as sn
 
 # Task A
-train = read_csv("files/train.csv")
-test = read_csv("files/test.csv")
-train = train.drop(["SalePrice"], axis=1)
-merge = concat([train, test])
+# train = read_csv("files/train.csv")
+# test = read_csv("files/test.csv")
+# train = train.drop(["SalePrice"], axis=1)
+# merge = concat([train, test])
+merge = read_csv("files/merge.csv")
 print(merge.describe())
 
 # Task B
