@@ -8,6 +8,10 @@ import seaborn as sn
 # train = train.drop(["SalePrice"], axis=1)
 # merge = concat([train, test])
 merge = read_csv("files/merge.csv")
-print(merge.describe())
 
 # Task B
+# count missing values per column
+missing_values = merge.apply(lambda x: x.count()/2919, axis=0)
+sorted_mv = missing_values.sort_values()
+print(sorted_mv[:])
+print(sorted_mv[sorted_mv[0] < 1])
